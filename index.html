@@ -52,7 +52,7 @@
 					<section class="wrapper style1" id="first">
 						<div class="inner">
 							<header class="major special">
-								<h3><i>“Contribuir a la seguridad jurídica y fiscal de tu negocio es nuestra prioridad.”</h3>
+								<i><h3 id="tw"></h3></i>
 								<h2>Nuestros servicios</h2>
 								<p>Nos especializamos en prevenir, gestionar y resolver problemas de carácter fiscal con efectividad, ofreciendo alternativas contables, fiscales e innovadoras para maximizar los beneficios de nuestros clientes.<br/><br/>
 									Nuestra prioridad es brindar un marco jurídico de seguridad y confianza en la operación de sus negocios y/o actividades, y trabajamos incansablemente para garantizar que alcancen sus objetivos con confianza y seguridad en materia jurídica y fiscal.</p>
@@ -164,6 +164,29 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				document.addEventListener("DOMContentLoaded", function() {
+					const text = '"Contribuir a la seguridad jurídica y fiscal de tu negocio es nuestra prioridad."';
+					const typingElement = document.getElementById('tw');
+					let index = 0;
+
+					function type() {
+						if (index < text.length) {
+							typingElement.textContent += text.charAt(index);
+							index++;
+							setTimeout(type, 50); // Adjust typing speed here
+						} else {
+							setTimeout(() => {
+								typingElement.textContent = ''; // Clear text
+								index = 0; // Reset index
+								type(); // Start typing again
+							}, 1000); // Pause before restarting (1 second delay)
+						}
+					}
+
+					type();
+				});
+			</script>
 
 	</body>
 </html>
