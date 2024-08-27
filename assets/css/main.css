@@ -4321,3 +4321,7 @@ input, select, textarea {
 		margin-right: 7px;
 		vertical-align: middle;
 	}
+
+	.taj{
+		text-align: justify;
+	}
