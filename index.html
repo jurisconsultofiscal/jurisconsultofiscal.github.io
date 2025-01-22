@@ -185,12 +185,6 @@
 							typingElement.textContent += text.charAt(index);
 							index++;
 							setTimeout(type, 50); // Adjust typing speed here
-						} else {
-							setTimeout(() => {
-								typingElement.textContent = ''; // Clear text
-								index = 0; // Reset index
-								type(); // Start typing again
-							}, 1000); // Pause before restarting (1 second delay)
 						}
 					}
 
